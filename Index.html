@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Funciones.js"></script>
+    <script src="https://unpkg.com/gojs/release/go.js"></script>
+</head>
+<body>
+   
+   <textarea name="" id="Palabra" cols="30" rows="10"></textarea>
+   <button id="c"onclick="reiniciar()">Cargar Palabra</button>
+   <p id="error"></p>
+   <div id="Grafo" style="border: solid 1px blue; width:400px; height:300px"></div>
+
+   <script>     
+        var $ = go.GraphObject.make;
+        var diagrama = $(go.Diagram, "Grafo", 
+              {
+                allowHorizontalScroll: false,
+                allowVerticalScroll: false,
+                "animationManager.isEnabled": true, 
+                "undoManager.isEnabled":true,
+                isReadOnly : false ,
+                isModelReadOnly : true ,
+                allowDelete : false ,
+                allowInsert : false ,
+                allowLink : false ,
+                allowMove : true ,
+                allowTextEdit : false ,
+                "contextMenuTool.isEnabled" : true,
+              });
+        diagrama.nodeTemplate =
+            $(go.Node, "Auto",new go.Binding("position", "pos", go.Point.parse), 
+            $(go.Shape, "Circle",
+            new go.Binding("fill", "color"),
+            new go.Binding("stroke", "color2"),
+            new go.Binding("strokeWidth","grosor")),
+            $(go.TextBlock,
+            { margin: 15 },
+            new go.Binding("text", "text"))
+            );
+        diagrama.linkTemplate =
+            $(go.Link,
+            $(go.Shape,
+            new go.Binding("stroke", "color"),new go.Binding("strokeWidth","grosor")),
+            $(go.Shape, { toArrow: "Standard" },
+            new go.Binding("fill", "color"),
+            new go.Binding("stroke", "color"),new go.Binding("strokeWidth","grosor")),
+            $(go.TextBlock, "left", { segmentOffset: new go.Point(0, -10) },
+            new go.Binding("text", "text"))
+            );
+       var Estados = [
+           {key:1, text:"q0",color:"white",grosor:2.0,pos:"250 25"},
+           {key:2, text:"q1",color:"white",grosor:2.0,pos:"400 25"},
+       ]
+        Transiciones= [
+           {from: 1, to: 1, text: "(a,a,R)",color:"black",width: 0,height:0},
+           {from: 1, to: 1, text: "(b,a,R)",color:"black"},
+           {from: 1, to: 2, text: "(#,#,L)",color:"black"},
+           {from: 2, to: 2, text: "(a,a,L)",color:"black"},
+           {from: 2, to: 2, text: "(#,#,R)",color:"black"},
+       ]     
+       diagrama.model = new go.GraphLinksModel(Estados,Transiciones);
+   </script>
+   <button id="p" onclick="PasoAPaso()">Paso a Paso</button>
+   <button id="d"onclick="reiniciar()">Reiniciar</button> 
+   <button id="r" onclick="resolver()">Resolver</button>
+   <div id="contenedor"></div>
+</body>
+</html>
