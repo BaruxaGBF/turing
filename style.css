@@ -15,6 +15,20 @@ body{
     padding-bottom: 0.25cm;
 }
 
+.tipo3{
+    margin-top: 2cm;
+    margin-left: 64.75%;
+    width: 200px;
+    height: 40px;
+    border-radius: 9px;
+    padding-left: 1.3cm;
+    background-color: rgb(98, 216, 98);
+    color: black;
+    font-family: Tahoma;
+    font-size: 22px;
+    margin-top: -10.5cm;
+}
+
 .tipo2{
     margin-top: 2cm;
     margin-left: 57.75%;
@@ -29,9 +43,20 @@ body{
 }
 
 .tipo1{
-    background-color:white;
-    width: 450px;
-    border-color: black;
+    margin-left: 57.75%;
+    width: 380px;
+    color:white;
+}
+
+.tipoaux{
+    padding: 0.30cm;
+    margin-left: 57.75%;
+    width: 380px;
+    border-radius: 9px;
+    font-family: Tahoma;
+    font-size: 22px;
+    color:white;
+   
 }
 
 .input{
@@ -59,7 +84,6 @@ body{
     color: white;
 }
 
-
 #Palabra{
     resize: none;
     overflow: hidden;
@@ -68,6 +92,11 @@ body{
     font-size: 20px;
     border-radius: 9px;
     border-color: black;
+}
+
+#correcto{
+    padding-bottom: 0.0099mm;
+    font-size: 18px;
 }
 
 #error{
@@ -79,10 +108,9 @@ body{
 
 .text-area{
     border-color: gray;
-    width: 25px;
-    height: 25px;
-    padding: 0.25cm;
-    padding-left: 0.45cm;
+    width: 30px;
+    height: 30px;
+    padding-left: 9px;
     resize: none;
     font-size: 18px;
     font-family: tahoma;
