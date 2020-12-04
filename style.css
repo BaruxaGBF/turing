@@ -72,8 +72,9 @@ body{
 
 #error{
     font-size: 18px;
-    margin-top: -5.25cm;
+    margin-top: -8.25cm;
     color: black;
+    margin-bottom: 5cm;
 }
 
 #Grafo{
