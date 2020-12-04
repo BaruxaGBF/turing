@@ -48,6 +48,7 @@ function CrearM(){
         var newContent = document.createTextNode(Cinta[i]); 
         newDiv.appendChild(newContent);
         newDiv2.appendChild(newDiv);
+        newDiv.className= "text-area";
     }
 }
 function reiniciar(){
