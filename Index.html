@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Máquina de Turing</title>
     <script src="Funciones.js"></script>
     <script src="https://unpkg.com/gojs/release/go.js"></script>
 </head>
+
 <body>
-   
-   <textarea name="" id="Palabra" cols="30" rows="10"></textarea>
-   <button id="c"onclick="reiniciar()">Cargar Palabra</button>
-   <p id="error"></p>
-   <div id="Grafo" style="border: solid 1px blue; width:400px; height:300px"></div>
+    <header class="header">
+        <a href="index.html"><img src="imagenes/logo-maquina-de-turing.png" title="Expresiones Regulares"></a>
+    </header>
+
+   <div class="container">
+        <div class="input">
+            <div class="vv">
+                <label id="label-cadena"><strong>Cadena</strong></label>
+                <input type="text" id="Palabra" name="Palabra">
+                <button id="c"onclick="reiniciar()">Cargar Palabra</button>       
+            </div>
+        </div>
+        <p id="error" class="tipo1"></p>
+        <div id="Grafo" style="border: solid 1px blue; width:400px; height:300px"></div> 
+   </div>
+    
 
    <script>     
         var $ = go.GraphObject.make;

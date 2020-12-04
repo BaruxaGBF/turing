@@ -1,0 +1,95 @@
+body{
+    background-position: 0; 
+    color: whitesmoke;
+}
+.header{
+    background-color:#ffffff;
+    position: fixed;
+    padding-top: 0.20cm;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #CFD3C9;
+    padding-bottom: 0.25cm;
+}
+
+.tipo2{
+    margin-left: 38.5%;
+    width: 450px;
+    border-radius: 9px;
+    padding: 0.30cm 0;
+    padding-left: 0.50cm;
+    background-color: rgb(255, 132, 132);
+    color: black;
+    font-family: Tahoma;
+    font-size: 22px;
+}
+
+.tipo1{
+    background-color:white;
+    width: 450px;
+    border-color: black;
+}
+
+.input{
+    margin-top: 3cm;
+    background-color: burlywood;
+    border-radius:22px;
+    width: 12.4cm;
+    height: 5.5cm;
+    display: flex;
+    margin-left: 5%;
+}
+
+#label-cadena{
+    color: black;
+    font-family: Tahoma;
+    font-size: 22px;
+}
+
+#c{
+    padding: 0.25cm .5cm;
+    border-radius: 9px;
+    border-color: black;
+    background-color: black;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: white;
+}
+
+#Palabra{
+    resize: none;
+    overflow: hidden;
+    font-family: Tahoma;
+    padding:0.25cm 0.5cm;
+    font-size: 20px;
+    border-radius: 9px;
+    border-color: black;
+}
+
+#error{
+    color: black;
+}
+
+.input div #label-cadena{
+    margin-left: 5cm;
+}
+
+.input div #Palabra{
+    margin-top: 0.35cm;
+    margin-left: 2.5cm;
+}
+
+.input #c{
+    margin-top: 0.75cm;
+    margin-left: 4.35cm;
+}
+
+.input div{ 
+    align-items: center; 
+    justify-content: center;
+    padding-top: 0.5cm;
+}
+

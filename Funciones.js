@@ -10,10 +10,12 @@ var idAnt=1;
 var palabra="";
 var st;
 function FormarCinta(Cinta,Cad){;
-    var errorByA = document.createTextNode("error"); 
+    var errorByA = document.createTextNode("Ingrese una cadena que contenga solo b y a"); 
     if(!difeAyB()){
         if(document.getElementById("error").childNodes[0]!=null)
           document.getElementById("error").removeChild(document.getElementById("error").childNodes[0]);
+          var elemento = document.getElementById("error");
+          elemento.className = "tipo1";
 
     if(Cad.length>0){
         Cinta.push("#");
@@ -25,6 +27,8 @@ function FormarCinta(Cinta,Cad){;
     }else{
       if(!document.getElementById("error").hasChildNodes(errorByA))
       document.getElementById("error").appendChild(errorByA);
+      var elemento = document.getElementById("error");
+      elemento.className = "tipo2";
     }
 }
 function difeAyB(){
