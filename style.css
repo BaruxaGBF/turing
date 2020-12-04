@@ -16,7 +16,8 @@ body{
 }
 
 .tipo2{
-    margin-left: 38.5%;
+    margin-top: 2cm;
+    margin-left: 55%;
     width: 450px;
     border-radius: 9px;
     padding: 0.30cm 0;
@@ -40,7 +41,6 @@ body{
     width: 12.4cm;
     height: 5.5cm;
     display: flex;
-    margin-left: 5%;
 }
 
 #label-cadena{
@@ -73,6 +73,10 @@ body{
     color: black;
 }
 
+#Grafo{
+    border-radius: 15px;
+}
+
 .input div #label-cadena{
     margin-left: 5cm;
 }
@@ -93,3 +97,11 @@ body{
     padding-top: 0.5cm;
 }
 
+.container .input{
+    margin-left: 55%;
+}
+
+.container #Grafo{
+    margin-top: -5.5cm;
+    margin-left: 7%;
+}

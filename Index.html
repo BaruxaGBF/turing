@@ -22,8 +22,11 @@
                 <button id="c"onclick="reiniciar()">Cargar Palabra</button>       
             </div>
         </div>
-        <p id="error" class="tipo1"></p>
-        <div id="Grafo" style="border: solid 1px blue; width:400px; height:300px"></div> 
+        <div id="Grafo" style="border: solid 4px burlywood; width:500px; height:300px"></div> 
+        <button id="p" onclick="PasoAPaso()">Paso a Paso</button>
+        <button id="d"onclick="reiniciar()">Reiniciar</button> 
+        <button id="r" onclick="resolver()">Resolver</button> 
+        <p id="error" class="tipo1"></p>   
    </div>
     
 
@@ -77,9 +80,6 @@
        ]     
        diagrama.model = new go.GraphLinksModel(Estados,Transiciones);
    </script>
-   <button id="p" onclick="PasoAPaso()">Paso a Paso</button>
-   <button id="d"onclick="reiniciar()">Reiniciar</button> 
-   <button id="r" onclick="resolver()">Resolver</button>
    <div id="contenedor"></div>
 </body>
 </html>
