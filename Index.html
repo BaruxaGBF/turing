@@ -37,15 +37,33 @@
     <div class="sele-velo">
         <div>
             <label id="label-velocidad">Velocidad</label>
-            <select name="selector" id="selector">
-                <option value="1">Lento</option>
+            <select name="selector" id="selector" onchange="Cambiar_T()" >
+                <option value="1" >Lento</option>
                 <option value="2">Medio</option>
-                <option value="3">Rápido</option>
+                <option value="3" selected>Rápido</option>
             </select>
         </div>  
     </div>
    </div>
-    
+    <script>
+        function Cambiar_T(){
+            switch(document.getElementById("selector").value){
+                case "1":{
+                    t=4000;
+                    break;
+                }
+                case "2":{
+                    t=3000;
+                    break;
+                }
+                case "3":{
+                    t=1000;
+                    break;
+                }
+            }
+        }
+        
+    </script>
 
    <script>     
         var $ = go.GraphObject.make;
