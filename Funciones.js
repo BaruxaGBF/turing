@@ -51,7 +51,8 @@ function CrearM(){
     document.body.insertBefore(newDiv2, currentDiv2);
     for(let i=0;i<Cinta.length;i++){
         var newDiv = document.createElement("textarea");
-        newDiv.setAttribute("id",i); 
+        newDiv.setAttribute("id",i);
+        newDiv.disabled=true; 
         var newContent = document.createTextNode(Cinta[i]); 
         newDiv.appendChild(newContent);
         newDiv2.appendChild(newDiv);
@@ -103,8 +104,8 @@ function PasoAPaso(){
                 diagrama.model.setDataProperty(diagrama.model.linkDataArray[ant], "color", "black");
                 st=setTimeout(() => {                  
                     document.getElementById(idAnt).style.border="solid 1px black";
-                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[0], "color2", "red")     
-                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[0], "color", "red");
+                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[0], "color2", "rgb(98, 216, 98)")     
+                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[0], "color", "rgb(255, 132, 132)");
                     document.getElementById(idC).value="a";
                     document.getElementById(idC).style.border="solid 1px red";
                     idAnt=idC;
@@ -118,8 +119,8 @@ function PasoAPaso(){
                 diagrama.model.setDataProperty(diagrama.model.linkDataArray[ant], "color", "black");
                 st=setTimeout(() => {
                     document.getElementById(idAnt).style.border="solid 1px black";
-                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[0], "color2", "red");   
-                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[1], "color", "red");
+                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[0], "color2", "rgb(98, 216, 98)");   
+                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[1], "color", "rgb(255, 132, 132)");
                     document.getElementById(idC).value="a";
                     document.getElementById(idC).style.border="solid 1px red";
                     idAnt=idC;
@@ -133,8 +134,8 @@ function PasoAPaso(){
                 diagrama.model.setDataProperty(diagrama.model.linkDataArray[ant], "color", "black");
                 st=setTimeout(() => {
                     document.getElementById(idAnt).style.border="solid 1px black";
-                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "red");   
-                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[2], "color", "red");
+                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "rgb(98, 216, 98)");   
+                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[2], "color", "rgb(255, 132, 132)");
                     document.getElementById(idC).value="#";
                     document.getElementById(idC).style.border="solid 1px red";
                     idAnt=idC;
@@ -151,8 +152,8 @@ function PasoAPaso(){
                 diagrama.model.setDataProperty(diagrama.model.linkDataArray[ant], "color", "black");
                 st=setTimeout(() => {
                     document.getElementById(idAnt).style.border="solid 1px black";
-                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "red");   
-                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[3], "color", "red");
+                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "rgb(98, 216, 98)");   
+                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[3], "color", "rgb(255, 132, 132)");
                     document.getElementById(idC).value="a";
                     document.getElementById(idC).style.border="solid 1px red";
                     idAnt=idC;
@@ -166,8 +167,8 @@ function PasoAPaso(){
                 diagrama.model.setDataProperty(diagrama.model.linkDataArray[ant], "color", "black");
                 st=setTimeout(() => {                   
                     document.getElementById(idAnt).style.border="solid 1px black";
-                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "red");   
-                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[4], "color", "red");
+                    diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "rgb(98, 216, 98)");   
+                    diagrama.model.setDataProperty(diagrama.model.linkDataArray[4], "color", "rgb(255, 132, 132)");
                     document.getElementById(idC).value="#";
                     document.getElementById(idC).style.border="solid 1px red";
                     idAnt=idC;
@@ -175,17 +176,9 @@ function PasoAPaso(){
                     st=setTimeout(() => {
                         document.getElementById(idAnt).style.border="solid 1px black";
                         document.getElementById(idC).style.border="solid 1px red";
-
                         var auxi = document.getElementById("correcto");
                         auxi.className = "tipo3";
                         document.getElementById("correcto").innerHTML = "<p>Proceso finalizado</p>";
-
-                        /*var correct = document.createTextNode("Proceso finalizado");
-                        if(!document.getElementById("correcto").hasChildNodes(correct))
-                        document.getElementById("correcto").appendChild(correct);
-                        var elemento = document.getElementById("correcto");
-                        elemento.className = "tipo3";*/
-
                     }, t/2);
                 }, t/2);               
                 Cinta[pos]="#";
