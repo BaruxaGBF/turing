@@ -15,9 +15,21 @@ body{
     padding-bottom: 0.25cm;
 }
 
+.tipo4{
+    margin-left: 62.75%;
+    width: 200px;
+    height: 30px;
+    border-radius: 9px;
+    padding-top: -1cm;
+    padding-left: 2.3cm;
+    background-color: rgb(216, 185, 98);
+    color: black;
+    font-family: Tahoma;
+    font-size: 22px;
+    margin-top: -10.5cm;
+}
+
 .tipo3{
-    
-    margin-top: 2cm;
     margin-left: 64.75%;
     width: 200px;
     height: 30px;
@@ -45,6 +57,7 @@ body{
 }
 
 .tipoaux{
+    margin-top: -10.5cm;
     margin-left: 57.75%;
     width: 380px;
     height: 30px;
@@ -72,7 +85,7 @@ body{
 #label-velocidad{
     color: black;
     font-family: Tahoma;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .container2{
@@ -85,18 +98,6 @@ body{
    
 }
 
-.sele-velo div{
-    display: inline; 
-    border: 2px solid;
-    border-color:black;
-    border-radius: 9px;
-    width: 170px;
-    height: 35px;
-    padding-top: 0.15cm;
-    padding-left: 0.25cm;
-    margin-left: 43%;
-}
-
 div #selector{
     margin-top: -10cm;
 }
@@ -104,6 +105,11 @@ div #selector{
 #selector{
     border-radius: 5px;
     border-color: black
+}
+
+div .select-fixed{
+    background-color: white;
+    margin-top: -10cm;
 }
 
 #c,#p, #d, #r{
@@ -114,6 +120,16 @@ div #selector{
     font-family: Tahoma;
     font-size: 14px;
     color: white;
+}
+
+.botones #label-velocidad{
+    padding-left: 0.50cm;
+}
+
+.botones select{
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: black;
 }
 
 #Palabra{
@@ -154,7 +170,7 @@ div #selector{
 }
 
 #contenedor{
-    margin-top: 1cm;
+    margin-top: 2cm;
 }
 
 .input div #label-cadena{

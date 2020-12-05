@@ -9,6 +9,7 @@ var idC=1;
 var idAnt=1;
 var palabra="";
 var st;
+
 function FormarCinta(Cinta,Cad){;
     
     var auxi = document.getElementById("error");
@@ -20,7 +21,7 @@ function FormarCinta(Cinta,Cad){;
         if(document.getElementById("error").childNodes[0]!=null)
           document.getElementById("error").removeChild(document.getElementById("error").childNodes[0]); 
           
-          document.getElementById("error").innerHTML = "<p>.</p>";
+          document.getElementById("error").innerHTML = "<p> </p>";
 
     if(Cad.length>0){
         Cinta.push("#");
@@ -69,16 +70,13 @@ function reiniciar(){
     clearInterval(F);
     clearTimeout(st);
 
-    var auxi = document.getElementById("error");
-    auxi.className = "tipoaux";
-    document.getElementById("error").innerHTML = "<p>.</p>"
-    
-
     palabra=document.getElementById("Palabra").value; 
     FormarCinta(Cinta,palabra);
     CrearM();
     document.getElementById("r").disabled=false;
     document.getElementById("p").disabled=false;
+    document.getElementById("r").style.background="black";
+    document.getElementById("p").style.background="black";
     diagrama.model.setDataProperty(diagrama.model.linkDataArray[0], "color", "black");
     diagrama.model.setDataProperty(diagrama.model.linkDataArray[1], "color", "black");
     diagrama.model.setDataProperty(diagrama.model.linkDataArray[2], "color", "black");
@@ -88,6 +86,8 @@ function reiniciar(){
     diagrama.model.setDataProperty(diagrama.model.nodeDataArray[1], "color2", "black");
 }
 function resolver(){
+    document.getElementById("r").style.background="gray";
+    document.getElementById("p").style.background="gray";
     document.getElementById("r").disabled=true;
     document.getElementById("p").disabled=true;
     if(fin){
@@ -101,7 +101,15 @@ function resolver(){
     }   
 }
 function PasoAPaso(){
-    if(fin){
+    if(Cinta.length>0){
+       if(fin){
+
+        document.getElementById("sel").disabled=true;
+
+        var auxi = document.getElementById("error");
+        auxi.className = "tipo4";
+        document.getElementById("error").innerHTML = "<p>Ejecutando...</p>";
+
         if(q0){
             if(Cinta[pos]==="a"){
                 diagrama.model.setDataProperty(diagrama.model.nodeDataArray[0], "color2", "black");
@@ -188,12 +196,21 @@ function PasoAPaso(){
                 Cinta[pos]="#";
                 ant=4;
                 pos++;
+                document.getElementById("r").style.background="gray";
+                document.getElementById("p").style.background="gray";
                 document.getElementById("r").disabled=true;
                 document.getElementById("p").disabled=true;
+
+                document.getElementById("sel").disabled=false;
+                
                 fin=false;
             }
         } 
+        } 
     }else{
-        console.log("Termino");
+        var auxi = document.getElementById("error");
+        auxi.className = "tipo4";
+        document.getElementById("error").innerHTML = "<p>Cadena vacía</p>";
     }
+        
 }

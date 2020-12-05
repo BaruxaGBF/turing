@@ -24,26 +24,26 @@
         </div>
         <div id="Grafo" style="border: solid 4px burlywood; width:500px; height:250px"></div> 
         <div class="botones">
-            <button id="p" onclick="PasoAPaso()">Paso a Paso</button>
-            <button id="d"onclick="reiniciar()">Reiniciar</button> 
-            <button id="r" onclick="resolver()">Resolver</button>
-        </div>
-         
-        <p id="error" class="tipoaux"></p>    
-   </div>
-
-   <div class="container2">
-    <div class="sele-velo">
-        <div>
-            <label id="label-velocidad">Velocidad</label>
-            <select name="selector" id="selector" onchange="Cambiar_T()" >
+            <button id="p" onclick="PasoAPaso()" class="botoncolor">Paso a Paso</button>
+            <button id="d"onclick="reiniciar()" class="botoncolor">Reiniciar</button> 
+            <button id="r" onclick="resolver()" >Resolver</button>
+            <label id="label-velocidad" class="select-fixed">Velocidad</label>
+            <select name="selector" class="select-fixed" id="sel" onchange="Cambiar_T()" >
                 <option value="1" >Lento</option>
                 <option value="2">Medio</option>
                 <option value="3" selected>Rápido</option>
             </select>
-        </div>  
-    </div>
+        </div>
+         
+        <p id="error" class="tipoaux"></p>   
    </div>
+
+   <div class="container2">
+    <div class="sele-velo">  
+    </div>
+    <div id="contenedor"></div>
+   </div>
+
     <script>
         function Cambiar_T(){
             switch(document.getElementById("selector").value){
@@ -114,6 +114,6 @@
        ]     
        diagrama.model = new go.GraphLinksModel(Estados,Transiciones);
    </script>
-   <div id="contenedor"></div>
+   
 </body>
 </html>
