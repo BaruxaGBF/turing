@@ -11,7 +11,7 @@ var palabra="";
 var st;
 function FormarCinta(Cinta,Cad){;
     
-    var auxi = document.getElementById("correcto");
+    var auxi = document.getElementById("error");
     auxi.className = "tipoaux";
 
     var errorByA = document.createTextNode("Ingrese una cadena que contenga solo b y a"); 
@@ -21,7 +21,7 @@ function FormarCinta(Cinta,Cad){;
           var elemento = document.getElementById("error");
           elemento.className = "tipo1"; 
           
-          document.getElementById("correcto").innerHTML = "<p> </p>";
+          document.getElementById("error").innerHTML = "<p> </p>";
 
     if(Cad.length>0){
         Cinta.push("#");
@@ -35,7 +35,7 @@ function FormarCinta(Cinta,Cad){;
       document.getElementById("error").appendChild(errorByA);
       var elemento = document.getElementById("error");
       elemento.className = "tipo2";
-      document.getElementById("correcto").innerHTML = "<p> </p>";
+      document.getElementById("error").innerHTML = "<p>Ingrese una cadena que contenga solo b y a</p>";
     }
 }
 function difeAyB(){
@@ -176,9 +176,9 @@ function PasoAPaso(){
                     st=setTimeout(() => {
                         document.getElementById(idAnt).style.border="solid 1px black";
                         document.getElementById(idC).style.border="solid 1px red";
-                        var auxi = document.getElementById("correcto");
+                        var auxi = document.getElementById("error");
                         auxi.className = "tipo3";
-                        document.getElementById("correcto").innerHTML = "<p>Proceso finalizado</p>";
+                        document.getElementById("error").innerHTML = "<p>Proceso finalizado</p>";
                     }, t/2);
                 }, t/2);               
                 Cinta[pos]="#";
