@@ -16,11 +16,13 @@ body{
 }
 
 .tipo3{
+    
     margin-top: 2cm;
     margin-left: 64.75%;
     width: 200px;
-    height: 40px;
+    height: 30px;
     border-radius: 9px;
+    padding-top: -1cm;
     padding-left: 1.3cm;
     background-color: rgb(98, 216, 98);
     color: black;
@@ -33,9 +35,8 @@ body{
     margin-top: 2cm;
     margin-left: 57.75%;
     width: 380px;
-    height: 40px;
+    height: 30px;
     border-radius: 9px;
-    padding: 0.30cm 0;
     padding-left: 0.50cm;
     background-color: rgb(255, 132, 132);
     color: black;
@@ -43,21 +44,14 @@ body{
     font-size: 22px;
 }
 
-.tipo1{
-    margin-left: 57.75%;
-    width: 380px;
-    color:white;
-}
-
 .tipoaux{
-    padding: 0.30cm;
     margin-left: 57.75%;
     width: 380px;
+    height: 30px;
     border-radius: 9px;
     font-family: Tahoma;
     font-size: 22px;
-    color:white;
-   
+    color: ghostwhite;
 }
 
 .input{
@@ -81,6 +75,10 @@ body{
     font-size: 22px;
 }
 
+.container2{
+    margin-top: -3cm;
+}
+
 .container2 .sele-velo{
     display: flex;
    
@@ -96,6 +94,10 @@ body{
     padding-top: 0.25cm;
     padding-left: 0.75cm;
     margin-left: 40%;
+}
+
+div #selector{
+    margin-top: -10cm;
 }
 
 #selector{
@@ -121,11 +123,6 @@ body{
     font-size: 20px;
     border-radius: 9px;
     border-color: black;
-}
-
-#correcto{
-    padding-bottom: 0.0099mm;
-    font-size: 18px;
 }
 
 #error{

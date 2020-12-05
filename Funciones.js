@@ -13,15 +13,14 @@ function FormarCinta(Cinta,Cad){;
     
     var auxi = document.getElementById("error");
     auxi.className = "tipoaux";
+    document.getElementById("error").innerHTML = "<p>.</p>";
 
     var errorByA = document.createTextNode("Ingrese una cadena que contenga solo b y a"); 
     if(!difeAyB()){
         if(document.getElementById("error").childNodes[0]!=null)
-          document.getElementById("error").removeChild(document.getElementById("error").childNodes[0]);
-          var elemento = document.getElementById("error");
-          elemento.className = "tipo1"; 
+          document.getElementById("error").removeChild(document.getElementById("error").childNodes[0]); 
           
-          document.getElementById("error").innerHTML = "<p> </p>";
+          document.getElementById("error").innerHTML = "<p>.</p>";
 
     if(Cad.length>0){
         Cinta.push("#");
@@ -33,8 +32,7 @@ function FormarCinta(Cinta,Cad){;
     }else{
       if(!document.getElementById("error").hasChildNodes(errorByA))
       document.getElementById("error").appendChild(errorByA);
-      var elemento = document.getElementById("error");
-      elemento.className = "tipo2";
+      auxi.className = "tipo2";
       document.getElementById("error").innerHTML = "<p>Ingrese una cadena que contenga solo b y a</p>";
     }
 }
@@ -70,6 +68,12 @@ function reiniciar(){
     Cinta=[];
     clearInterval(F);
     clearTimeout(st);
+
+    var auxi = document.getElementById("error");
+    auxi.className = "tipoaux";
+    document.getElementById("error").innerHTML = "<p>.</p>"
+    
+
     palabra=document.getElementById("Palabra").value; 
     FormarCinta(Cinta,palabra);
     CrearM();
